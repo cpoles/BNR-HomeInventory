@@ -14,6 +14,7 @@
 		77BF90E31FCFA1230007DC52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77BF90E11FCFA1230007DC52 /* LaunchScreen.storyboard */; };
 		77BF90EE1FCFA1230007DC52 /* HomeInventoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF90ED1FCFA1230007DC52 /* HomeInventoryTests.swift */; };
 		77BF90F91FCFA1230007DC52 /* HomeInventoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF90F81FCFA1230007DC52 /* HomeInventoryUITests.swift */; };
+		77BF91071FCFA1760007DC52 /* ItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF91061FCFA1760007DC52 /* ItemsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		77BF90F41FCFA1230007DC52 /* HomeInventoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeInventoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77BF90F81FCFA1230007DC52 /* HomeInventoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInventoryUITests.swift; sourceTree = "<group>"; };
 		77BF90FA1FCFA1230007DC52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77BF91061FCFA1760007DC52 /* ItemsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				77BF90DF1FCFA1230007DC52 /* Assets.xcassets */,
 				77BF90E11FCFA1230007DC52 /* LaunchScreen.storyboard */,
 				77BF90E41FCFA1230007DC52 /* Info.plist */,
+				77BF91061FCFA1760007DC52 /* ItemsTableViewController.swift */,
 			);
 			path = HomeInventory;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			files = (
 				77BF90DB1FCFA1230007DC52 /* ViewController.swift in Sources */,
 				77BF90D91FCFA1230007DC52 /* AppDelegate.swift in Sources */,
+				77BF91071FCFA1760007DC52 /* ItemsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
