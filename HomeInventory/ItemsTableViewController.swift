@@ -18,11 +18,23 @@ class ItemsTableViewController: UITableViewController {
     // MARK:- Action Methods
     
     @IBAction func addNewItem(_ sender: UIButton) {
-    
+        print("New Item pressed.")
     }
     
     @IBAction func toggleEditingMode(_ sender: UIButton) {
+        print("Edit Mode pressed.")
         
+        // If you are currently in editing mode
+        if isEditing {
+            sender.setTitle("Edit", for: .normal)
+            // turn off editing mode
+            setEditing(false, animated: true)
+        } else {
+            sender.setTitle("Done", for: .normal)
+            
+            // Enter editing mode
+            setEditing(true, animated: true)
+        }
     }
     
 
