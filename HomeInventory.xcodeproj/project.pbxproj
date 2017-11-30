@@ -104,11 +104,11 @@
 				77BF90D81FCFA1230007DC52 /* AppDelegate.swift */,
 				77BF91061FCFA1760007DC52 /* ItemsTableViewController.swift */,
 				77BF91081FCFA51A0007DC52 /* Item.swift */,
+				77BF910A1FCFA7910007DC52 /* ItemsStore.swift */,
 				77BF90DC1FCFA1230007DC52 /* Main.storyboard */,
 				77BF90DF1FCFA1230007DC52 /* Assets.xcassets */,
 				77BF90E11FCFA1230007DC52 /* LaunchScreen.storyboard */,
 				77BF90E41FCFA1230007DC52 /* Info.plist */,
-				77BF910A1FCFA7910007DC52 /* ItemsStore.swift */,
 			);
 			path = HomeInventory;
 			sourceTree = "<group>";
