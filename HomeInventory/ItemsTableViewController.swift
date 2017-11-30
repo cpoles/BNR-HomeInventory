@@ -143,6 +143,11 @@ class ItemsTableViewController: UITableViewController {
         itemStore.moveItem(from: fromIndexPath.row, to: to.row)
         
     }
+    
+    // Override to change delete button text
+    override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "Remove"
+    }
  
 
     /*
