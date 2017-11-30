@@ -19,6 +19,17 @@ class ItemsTableViewController: UITableViewController {
     
     @IBAction func addNewItem(_ sender: UIButton) {
         print("New Item pressed.")
+        
+        // create new item and add to store
+        let newItem = itemStore.createItem()
+        
+        // see where in the array the newItem is
+        if let index = itemStore.allItems.index(of: newItem) {
+            let indexPath = IndexPath(row: index, section: 0)
+            
+            // insert new row to the table
+            tableView.insertRows(at: [indexPath], with: .automatic)
+        }
     }
     
     @IBAction func toggleEditingMode(_ sender: UIButton) {

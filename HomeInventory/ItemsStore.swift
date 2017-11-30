@@ -18,15 +18,9 @@ class ItemsStore {
         
         let newItem = Item(random: true)
         allItems.append(newItem)
+        allItems = allItems.sorted { $0.valueInDollars < $1.valueInDollars }
         
         return newItem
-    }
-    
-    
-    init() {
-        for _ in 0...7 {
-            createItem()
-        }
     }
     
 }
