@@ -13,6 +13,7 @@ class ItemsStore {
     
     var allItems = [Item]()
     
+    // MARK:- Class Methods
     
     @discardableResult func createItem() -> Item {
         
@@ -23,4 +24,12 @@ class ItemsStore {
         return newItem
     }
     
+    // A function that removes an item from allItems
+    func removeItem(_ item: Item) {
+        if let index = allItems.index(of: item) {
+            allItems.remove(at: index)
+            allItems = allItems.sorted { $0.valueInDollars < $1.valueInDollars }
+        }
+    }
+
 }

@@ -13,7 +13,7 @@ class ItemsTableViewController: UITableViewController {
     // MARK:- Stored Properties
     
     var itemStore: ItemsStore!
-    
+
     
     // MARK:- Action Methods
     
@@ -48,7 +48,6 @@ class ItemsTableViewController: UITableViewController {
         }
     }
     
-
     
     // MARK:- App Lifecycle
 
@@ -100,17 +99,20 @@ class ItemsTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // Override to support editing the table view.
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        // if the table view is asking to commit a delete command
         if editingStyle == .delete {
+            
+            let item = itemStore.allItems[indexPath.row]
+            // Remove item from itemStore
+            itemStore.removeItem(item)
+            
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
