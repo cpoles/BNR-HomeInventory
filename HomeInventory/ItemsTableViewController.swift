@@ -91,10 +91,6 @@ class ItemsTableViewController: UITableViewController {
             cell.detailTextLabel?.text = "\(item.valueInDollars)"
         }
         
-        
-        
-        
-        
         return cell
     }
     
@@ -180,6 +176,18 @@ class ItemsTableViewController: UITableViewController {
         
     }
     
+    // Override to avoid rearranging after the last  row of the table view
+    override func tableView(_ tableView: UITableView, targetIndexPathForMoveFromRowAt sourceIndexPath: IndexPath, toProposedIndexPath proposedDestinationIndexPath: IndexPath) -> IndexPath {
+        var indexPath = IndexPath()
+        
+        if proposedDestinationIndexPath.row == itemStore.allItems.count {
+            indexPath = sourceIndexPath
+        } else {
+            indexPath = proposedDestinationIndexPath
+        }
+        
+        return indexPath
+    }
 
     /*
     // MARK: - Navigation
