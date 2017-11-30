@@ -15,6 +15,7 @@
 		77BF90F91FCFA1230007DC52 /* HomeInventoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF90F81FCFA1230007DC52 /* HomeInventoryUITests.swift */; };
 		77BF91071FCFA1760007DC52 /* ItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF91061FCFA1760007DC52 /* ItemsTableViewController.swift */; };
 		77BF91091FCFA51A0007DC52 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF91081FCFA51A0007DC52 /* Item.swift */; };
+		77BF910B1FCFA7910007DC52 /* ItemsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF910A1FCFA7910007DC52 /* ItemsStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		77BF90FA1FCFA1230007DC52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77BF91061FCFA1760007DC52 /* ItemsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsTableViewController.swift; sourceTree = "<group>"; };
 		77BF91081FCFA51A0007DC52 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		77BF910A1FCFA7910007DC52 /* ItemsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				77BF90DF1FCFA1230007DC52 /* Assets.xcassets */,
 				77BF90E11FCFA1230007DC52 /* LaunchScreen.storyboard */,
 				77BF90E41FCFA1230007DC52 /* Info.plist */,
+				77BF910A1FCFA7910007DC52 /* ItemsStore.swift */,
 			);
 			path = HomeInventory;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			files = (
 				77BF90D91FCFA1230007DC52 /* AppDelegate.swift in Sources */,
 				77BF91091FCFA51A0007DC52 /* Item.swift in Sources */,
+				77BF910B1FCFA7910007DC52 /* ItemsStore.swift in Sources */,
 				77BF91071FCFA1760007DC52 /* ItemsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
