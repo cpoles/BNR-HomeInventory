@@ -15,6 +15,17 @@ class ItemsTableViewController: UITableViewController {
     var itemStore: ItemsStore!
     
     
+    // MARK:- Action Methods
+    
+    @IBAction func addNewItem(_ sender: UIButton) {
+    
+    }
+    
+    @IBAction func toggleEditingMode(_ sender: UIButton) {
+        
+    }
+    
+
     
     // MARK:- App Lifecycle
 
