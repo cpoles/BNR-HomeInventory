@@ -38,9 +38,6 @@ class ItemsStore {
             return
         }
         
-        if toIndex == allItems.count - 1 {
-            return
-        }
         // Get reference to object being moved so you can reinsert it
         let movedItem = allItems[fromIndex]
         
