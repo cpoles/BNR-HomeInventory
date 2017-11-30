@@ -86,7 +86,6 @@ class ItemsTableViewController: UITableViewController {
         cell.textLabel?.text = item.name
         cell.detailTextLabel?.text = "\(item.valueInDollars)"
         
-
         return cell
     }
     
