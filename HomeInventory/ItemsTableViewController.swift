@@ -73,15 +73,14 @@ class ItemsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        // return the number of items in the itemStore
+        // return the number of items in the itemStore"
         return itemStore.allItems.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-
-        // Configure the cell...
+        
         let item = itemStore.allItems[indexPath.row]
         cell.textLabel?.text = item.name
         cell.detailTextLabel?.text = "\(item.valueInDollars)"
@@ -90,13 +89,20 @@ class ItemsTableViewController: UITableViewController {
     }
     
 
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
-        return true
+        var boolRow: Bool = true
+        
+        // Do not reorder the last row of the tableView
+        if indexPath.row == itemStore.allItems.count - 1 {
+            boolRow = false
+        }
+        
+        return boolRow
     }
-    */
+    
 
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -148,8 +154,6 @@ class ItemsTableViewController: UITableViewController {
         return "Remove"
     }
     
-    
-
     
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
