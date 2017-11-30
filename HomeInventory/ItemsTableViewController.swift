@@ -105,11 +105,32 @@ class ItemsTableViewController: UITableViewController {
         if editingStyle == .delete {
             
             let item = itemStore.allItems[indexPath.row]
-            // Remove item from itemStore
-            itemStore.removeItem(item)
             
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            let title = "Delete \(item.name)?"
+            let message = "Are you sure you want to delete this item?"
+            
+            // create the AlertController
+            let ac = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+            
+            // create Cancel Action
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            ac.addAction(cancelAction)
+            
+            let deleteAction = UIAlertAction(title: "Delete",
+                                             style: .destructive,
+                                             handler: { (action) -> Void in
+            
+                // Remove item from itemStore
+                self.itemStore.removeItem(item)
+                
+                // Delete the row from the data source
+                self.tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            })
+            ac.addAction(deleteAction)
+            
+            // Present the alert controller
+            present(ac, animated: true, completion: nil)
         }
     }
     
@@ -120,7 +141,6 @@ class ItemsTableViewController: UITableViewController {
         
         // Update the model
         itemStore.moveItem(from: fromIndexPath.row, to: to.row)
-        
         
     }
  
