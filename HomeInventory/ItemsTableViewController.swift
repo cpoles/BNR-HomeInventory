@@ -147,15 +147,25 @@ class ItemsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
         return "Remove"
     }
- 
+    
+    
 
-    /*
+    
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
-        return true
+        
+        var boolRow: Bool = true
+        
+        // Do not reorder the last row of the tableView
+        if indexPath.row == itemStore.allItems.count - 1 {
+            boolRow = false
+        }
+        
+        return boolRow
+        
     }
-    */
+    
 
     /*
     // MARK: - Navigation
