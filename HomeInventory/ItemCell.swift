@@ -10,6 +10,12 @@ import UIKit
 
 class ItemCell: UITableViewCell {
 
+    // MARK:- Class Variables
+    
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var serialNumberLabel: UILabel!
+    @IBOutlet var valueLabel: UILabel!
+    
     
 
 }
