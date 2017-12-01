@@ -76,6 +76,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="hd2-Sp-ULt" firstAttribute="centerY" secondItem="AIJ-LH-4rW" secondAttribute="centerY" id="JEf-j9-11e"/>
+                                        <constraint firstItem="Ugl-H8-b9V" firstAttribute="top" secondItem="5Fg-zg-7NY" secondAttribute="bottom" constant="13" id="Pc3-3H-xk6"/>
                                         <constraint firstItem="5Fg-zg-7NY" firstAttribute="top" secondItem="AIJ-LH-4rW" secondAttribute="topMargin" id="Zy8-8D-QK4"/>
                                         <constraint firstItem="5Fg-zg-7NY" firstAttribute="leading" secondItem="AIJ-LH-4rW" secondAttribute="leadingMargin" id="dzG-eX-ULQ"/>
                                         <constraint firstItem="Ugl-H8-b9V" firstAttribute="leading" secondItem="5Fg-zg-7NY" secondAttribute="leading" id="isL-IP-8td"/>

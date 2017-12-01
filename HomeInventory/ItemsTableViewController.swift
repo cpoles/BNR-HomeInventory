@@ -62,7 +62,8 @@ class ItemsTableViewController: UITableViewController {
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
         
-        tableView.rowHeight = 65
+        tableView.rowHeight = UITableViewAutomaticDimension // default value for row Height
+        tableView.estimatedRowHeight = 65
     }
 
 
