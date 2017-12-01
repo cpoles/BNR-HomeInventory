@@ -48,7 +48,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" rowHeight="60" id="GrN-MO-gaC" customClass="ItemCell" customModule="HomeInventory" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="60" id="GrN-MO-gaC" customClass="ItemCell" customModule="HomeInventory" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="88" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GrN-MO-gaC" id="AIJ-LH-4rW">
@@ -83,6 +83,11 @@
                                         <constraint firstAttribute="bottom" secondItem="Ugl-H8-b9V" secondAttribute="bottom" constant="1.5" id="wOF-4Z-rd0"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="5Fg-zg-7NY" id="Tt4-8M-nh3"/>
+                                    <outlet property="serialNumberLabel" destination="Ugl-H8-b9V" id="o9H-RA-Qm8"/>
+                                    <outlet property="valueLabel" destination="hd2-Sp-ULt" id="fnY-LP-lO8"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
