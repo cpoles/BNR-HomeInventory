@@ -197,14 +197,26 @@ class ItemsTableViewController: UITableViewController {
         return indexPath
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        // if the triggered segue is the "showItem" segue
+        switch segue.identifier {
+        case "showItem"?:
+            // figure out what row was tapped
+            if let row = tableView.indexPathForSelectedRow?.row {
+                // Get the item associated with this row and pass it along
+                let item = itemStore.allItems[row]
+                // Destination view controller
+                let detailViewController = segue.destination as! DetailViewController
+                detailViewController.item = item
+            }
+        default:
+            preconditionFailure("Unexpected segue identifier.")
+        }
     }
-    */
+    
 
 }
