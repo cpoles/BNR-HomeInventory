@@ -110,15 +110,11 @@ class ItemsTableViewController: UITableViewController {
     
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        var boolRow: Bool = true
         
-        // Do not reorder the last row of the tableView
-        if indexPath.row == itemStore.allItems.count {
-            boolRow = false
-        }
+        // Do not allow the last row to be edited
+        return indexPath.row == itemStore.allItems.count ? false : true
         
-        return boolRow
+        
     }
     
 
