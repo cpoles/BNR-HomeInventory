@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        
         // Create items store
         let itemStore = ItemsStore()
         
@@ -26,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navController = window!.rootViewController as! UINavigationController // set the NavigationController as the rootViewController
         let itemsController = navController.topViewController as! ItemsTableViewController // place ItemsTableViewController on top of the UINavigation Controller views stack
         itemsController.itemStore = itemStore
-        
         
         return true
     }

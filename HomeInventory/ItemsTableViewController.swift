@@ -65,6 +65,12 @@ class ItemsTableViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension // default value for row Height
         tableView.estimatedRowHeight = 65
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
 
 
     // MARK:- Table view data source

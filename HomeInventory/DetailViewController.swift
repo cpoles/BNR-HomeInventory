@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UITextFieldDelegate {
     
     // MARK:- Class Properties
     
@@ -54,10 +54,32 @@ class DetailViewController: UIViewController {
         dateLabel.text = dateFormatter.string(from: item.dateCreated)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // "Save changes to item"
+        item.name = nameField.text ?? ""
+        item.serialNumber = serialNumberField.text
+        
+        if let valueText = valueField.text,
+            let value = numberFormatter.number(from: valueText) {
+                item.valueInDollars = value.intValue
+        } else {
+            item.valueInDollars = 0
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - Delegation
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     
 
     /*
