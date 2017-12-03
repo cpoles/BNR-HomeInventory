@@ -10,22 +10,29 @@ import UIKit
 
 class DateChangeViewController: UIViewController {
     
+    
+    
+    @IBOutlet var datePicker: UIDatePicker!
+    
+    
+    
     // MARK: - Class Properties
-    var date: Date!
+    var item: Item!
     
     
-    
-    
+    // MARK: - App LifeCycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+       item.dateCreated = datePicker.date
+    
     }
     
 

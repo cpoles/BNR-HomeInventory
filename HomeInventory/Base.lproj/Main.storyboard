@@ -168,6 +168,10 @@
                                                 <rect key="frame" x="0.0" y="443" width="343" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80989583333333337" blue="0.2697482638888889" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Change Date"/>
+                                                <connections>
+                                                    <action selector="changeDate:" destination="8YN-6N-bf3" eventType="touchUpInside" id="Bka-S7-nGq"/>
+                                                    <segue destination="alI-8v-38p" kind="show" identifier="changeDate" id="05b-rb-Juv"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -208,10 +212,10 @@
             </objects>
             <point key="canvasLocation" x="1468" y="-22"/>
         </scene>
-        <!--View Controller-->
+        <!--Date Change View Controller-->
         <scene sceneID="UxG-rQ-Mge">
             <objects>
-                <viewController id="alI-8v-38p" sceneMemberID="viewController">
+                <viewController id="alI-8v-38p" customClass="DateChangeViewController" customModule="HomeInventory" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="net-Ln-hhQ"/>
                         <viewControllerLayoutGuide type="bottom" id="v5s-VG-2cG"/>
@@ -220,19 +224,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vcn-aP-wvA">
-                                <rect key="frame" x="27.5" y="225" width="320" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="533979942.88201499">
-                                    <!--2017-12-03 07:45:42 +0000-->
-                                </date>
-                            </datePicker>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="mUS-HE-ggc">
+                                <rect key="frame" x="28" y="204.5" width="320" height="258.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89n-EX-1ud">
+                                        <rect key="frame" x="106" y="0.0" width="108" height="25.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vcn-aP-wvA">
+                                        <rect key="frame" x="0.0" y="42.5" width="320" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="533979942.88201499">
+                                            <!--2017-12-03 07:45:42 +0000-->
+                                        </date>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Vcn-aP-wvA" firstAttribute="centerY" secondItem="Rao-aw-Qxj" secondAttribute="centerY" id="Nn1-tL-oIM"/>
-                            <constraint firstItem="Vcn-aP-wvA" firstAttribute="centerX" secondItem="Rao-aw-Qxj" secondAttribute="centerX" id="tIf-QD-6xA"/>
+                            <constraint firstItem="mUS-HE-ggc" firstAttribute="centerX" secondItem="Rao-aw-Qxj" secondAttribute="centerX" id="9mb-Fg-Hhw"/>
+                            <constraint firstItem="mUS-HE-ggc" firstAttribute="centerY" secondItem="Rao-aw-Qxj" secondAttribute="centerY" id="CSz-f1-dvj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="Vcn-aP-wvA" id="Jbn-6t-MBd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cwE-r3-9oq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

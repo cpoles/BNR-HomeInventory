@@ -25,6 +25,10 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
+    @IBAction func changeDate(_ sender: UIButton) {
+        print("button is working")
+    }
+    
     var item: Item! {
         didSet {
             navigationItem.title = item.name
@@ -92,14 +96,27 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         return textField.resignFirstResponder()
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        switch segue.identifier {
+        case "changeDate"?:
+            if let dateChangeViewController = segue.destination as? DateChangeViewController {
+                dateChangeViewController.item = item
+            } else {
+                print("cast failed")
+            }
+            
+        default:
+            preconditionFailure("Unexpected segue identifer.")
+        }
+        
+        
     }
-    */
+    
 
 }
