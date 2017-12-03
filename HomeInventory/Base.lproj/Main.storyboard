@@ -155,12 +155,22 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mS-Kv-3hZ">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="RpB-qx-Oos">
                                         <rect key="frame" x="0.0" y="114" width="343" height="473"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mS-Kv-3hZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="440"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TU6-75-LVz">
+                                                <rect key="frame" x="0.0" y="443" width="343" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80989583333333337" blue="0.2697482638888889" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Change Date"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="nHb-6E-x6B" firstAttribute="leading" secondItem="M0j-jC-IYB" secondAttribute="leading" id="E0v-ab-RXr"/>
@@ -196,7 +206,37 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1341.5999999999999" y="-22.03898050974513"/>
+            <point key="canvasLocation" x="1468" y="-22"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="UxG-rQ-Mge">
+            <objects>
+                <viewController id="alI-8v-38p" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="net-Ln-hhQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="v5s-VG-2cG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rao-aw-Qxj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vcn-aP-wvA">
+                                <rect key="frame" x="27.5" y="225" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="533979942.88201499">
+                                    <!--2017-12-03 07:45:42 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vcn-aP-wvA" firstAttribute="centerY" secondItem="Rao-aw-Qxj" secondAttribute="centerY" id="Nn1-tL-oIM"/>
+                            <constraint firstItem="Vcn-aP-wvA" firstAttribute="centerX" secondItem="Rao-aw-Qxj" secondAttribute="centerX" id="tIf-QD-6xA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cwE-r3-9oq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2498" y="-22"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ydz-BK-Qxk">
