@@ -40,35 +40,11 @@ class ItemsTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func toggleEditingMode(_ sender: UIButton) {
-        print("Edit Mode pressed.")
-        
-        // If you are currently in editing mode
-        if isEditing {
-            sender.setTitle("Edit", for: .normal)
-            // turn off editing mode
-            setEditing(false, animated: true)
-        } else {
-            sender.setTitle("Done", for: .normal)
-            
-            // Enter editing mode
-            setEditing(true, animated: true)
-        }
-    }
-    
     
     // MARK:- View Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Avoid TableView cells to overlap the status bar
-        // Get the height of the status bar
-        let statusBarHeight = UIApplication.shared.statusBarFrame.height
-        
-        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
-        tableView.contentInset = insets
-        tableView.scrollIndicatorInsets = insets
         
         tableView.rowHeight = UITableViewAutomaticDimension // default value for row Height
         tableView.estimatedRowHeight = 65
