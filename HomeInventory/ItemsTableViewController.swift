@@ -19,7 +19,9 @@ class ItemsTableViewController: UITableViewController {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        navigationItem.leftBarButtonItem = editButtonItem
+        navigationItem.leftBarButtonItem = editButtonItem // edit button property creates a UIBarButtonItem with the title Edit. 
+                                                            // It also comes with a target-action pair: it calls setEditing(_:animated) in its
+                                                           // ViewControler when tapped
     }
     
     
