@@ -88,11 +88,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Delegation
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let customTextField = textField as? DetailTextField {
-            return customTextField.resignFirstResponder()
-        } else {
-            return false
-        }
+        // dismiss keyboard when user taps Return
+        return textField.resignFirstResponder()
     }
 
     /*
