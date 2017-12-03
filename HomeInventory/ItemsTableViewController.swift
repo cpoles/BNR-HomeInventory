@@ -15,9 +15,17 @@ class ItemsTableViewController: UITableViewController {
     var itemStore: ItemsStore!
 
     
+    // MARK: - Initialisation
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        navigationItem.leftBarButtonItem = editButtonItem
+    }
+    
+    
     // MARK:- Action Methods
     
-    @IBAction func addNewItem(_ sender: UIButton) {
+    @IBAction func addNewItem(_ sender: UIBarButtonItem) {
         print("New Item pressed.")
         
         // create new item and add to store

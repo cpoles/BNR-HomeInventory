@@ -97,7 +97,13 @@
                             <outlet property="delegate" destination="3LI-dm-YtR" id="5mz-oO-Fte"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Homepwner" id="yRk-RA-Hkp"/>
+                    <navigationItem key="navigationItem" title="Homepwner" id="yRk-RA-Hkp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gIb-am-Kts">
+                            <connections>
+                                <action selector="addNewItem:" destination="3LI-dm-YtR" id="ekV-b4-fa7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hlZ-a2-nSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
