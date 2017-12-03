@@ -12,11 +12,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     
     // MARK:- Class Properties
     
-    @IBOutlet var nameField: UITextField!
+    @IBOutlet var nameField: DetailTextField!
     
-    @IBOutlet var serialNumberField: UITextField!
+    @IBOutlet var serialNumberField: DetailTextField!
     
-    @IBOutlet var valueField: UITextField!
+    @IBOutlet var valueField: DetailTextField!
     
     @IBOutlet var dateLabel: UILabel!
     
@@ -88,11 +88,12 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Delegation
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+        if let customTextField = textField as? DetailTextField {
+            return customTextField.resignFirstResponder()
+        } else {
+            return false
+        }
     }
-    
-    
 
     /*
     // MARK: - Navigation
