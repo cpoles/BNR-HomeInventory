@@ -21,7 +21,7 @@ class ItemsTableViewController: UITableViewController {
         
         navigationItem.leftBarButtonItem = editButtonItem // edit button property creates a UIBarButtonItem with the title Edit. 
                                                             // It also comes with a target-action pair: it calls setEditing(_:animated) in its
-                                                           // ViewControler when tapped
+                                                            // ViewControler when tapped
     }
     
     
