@@ -49,7 +49,7 @@ class ItemsTableViewController: UITableViewController {
     }
     
     
-    // MARK:- App Lifecycle
+    // MARK:- View Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -25,8 +25,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
-    
-    
     var item: Item!
     
     let numberFormatter: NumberFormatter = {
@@ -44,7 +42,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         return formatter
     }()
     
-    // MARK:- App Lifecycle
+    // MARK:- View Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
