@@ -10,11 +10,7 @@ import UIKit
 
 class DateChangeViewController: UIViewController {
     
-    
-    
     @IBOutlet var datePicker: UIDatePicker!
-    
-    
     
     // MARK: - Class Properties
     var item: Item!

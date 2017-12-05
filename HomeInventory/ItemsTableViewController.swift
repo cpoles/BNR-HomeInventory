@@ -14,7 +14,6 @@ class ItemsTableViewController: UITableViewController {
     
     var itemStore: ItemsStore!
 
-    
     // MARK: - Initialisation
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -23,7 +22,6 @@ class ItemsTableViewController: UITableViewController {
                                                             // It also comes with a target-action pair: it calls setEditing(_:animated) in its
                                                             // ViewControler when tapped
     }
-    
     
     // MARK:- Action Methods
     
@@ -98,18 +96,17 @@ class ItemsTableViewController: UITableViewController {
         return cell
     }
     
-
-    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         
         // Do not allow the last row to be edited
         return indexPath.row == itemStore.allItems.count ? false : true
-        
-        
     }
     
-
+    // Override to avoid the last row to be selected
+    override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        return indexPath.row == itemStore.allItems.count ? false : true
+    }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         // if the table view is asking to commit a delete command
@@ -145,8 +142,6 @@ class ItemsTableViewController: UITableViewController {
         }
     }
     
-
-    
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
         
@@ -166,7 +161,6 @@ class ItemsTableViewController: UITableViewController {
         // Return false if you do not want the item to be re-orderable.
         
         var boolRow: Bool = true
-        
 
         if indexPath.row == itemStore.allItems.count {
             boolRow = false
