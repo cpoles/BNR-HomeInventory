@@ -12,7 +12,6 @@ class DetailTextField: UITextField {
     
     override func becomeFirstResponder() -> Bool {
         super.becomeFirstResponder()
-        
         borderStyle = .bezel
         return true
     }
