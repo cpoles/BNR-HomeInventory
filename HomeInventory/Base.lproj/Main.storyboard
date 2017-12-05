@@ -93,7 +93,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bVd-7Y-ysj">
-                                <rect key="frame" x="16" y="72" width="343" height="587"/>
+                                <rect key="frame" x="16" y="72" width="343" height="543"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="X3g-dF-cOZ">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -156,7 +156,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RpB-qx-Oos">
-                                        <rect key="frame" x="0.0" y="114" width="343" height="473"/>
+                                        <rect key="frame" x="0.0" y="114" width="343" height="429"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mS-Kv-3hZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
@@ -164,15 +164,14 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" translatesAutoresizingMaskIntoConstraints="NO" id="yN5-Ar-Ytz">
-                                                <rect key="frame" x="0.0" y="28.5" width="343" height="406.5"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" translatesAutoresizingMaskIntoConstraints="NO" id="yN5-Ar-Ytz">
+                                                <rect key="frame" x="0.0" y="28.5" width="343" height="362.5"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TU6-75-LVz">
-                                                <rect key="frame" x="0.0" y="443" width="343" height="30"/>
+                                                <rect key="frame" x="0.0" y="399" width="343" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80989583333333337" blue="0.2697482638888889" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Change Date"/>
                                                 <connections>
-                                                    <action selector="changeDate:" destination="8YN-6N-bf3" eventType="touchUpInside" id="Bka-S7-nGq"/>
                                                     <segue destination="alI-8v-38p" kind="show" identifier="changeDate" id="05b-rb-Juv"/>
                                                 </connections>
                                             </button>
@@ -186,14 +185,26 @@
                                     <constraint firstItem="lbk-TP-8C6" firstAttribute="leading" secondItem="nHb-6E-x6B" secondAttribute="leading" id="zh8-fz-2fM"/>
                                 </constraints>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hK7-6j-2jd">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Vfa-i5-r1i"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Item" id="z8z-ce-Qbg"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="bVd-7Y-ysj" secondAttribute="leading" id="2fS-Jc-Pau"/>
-                            <constraint firstItem="TBP-Tr-dRN" firstAttribute="top" secondItem="bVd-7Y-ysj" secondAttribute="bottom" constant="8" id="3vD-kl-6iu"/>
+                            <constraint firstAttribute="trailing" secondItem="hK7-6j-2jd" secondAttribute="trailing" id="4Dp-Bb-KWW"/>
                             <constraint firstItem="bVd-7Y-ysj" firstAttribute="top" secondItem="9Jk-4p-ySw" secondAttribute="bottom" constant="8" id="6TR-Kh-OVQ"/>
+                            <constraint firstItem="hK7-6j-2jd" firstAttribute="leading" secondItem="6yS-HQ-SHV" secondAttribute="leading" id="8nc-kK-nw2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bVd-7Y-ysj" secondAttribute="trailing" id="V6A-Lq-chS"/>
+                            <constraint firstItem="TBP-Tr-dRN" firstAttribute="top" secondItem="hK7-6j-2jd" secondAttribute="bottom" id="YOh-Fm-HmC"/>
+                            <constraint firstItem="hK7-6j-2jd" firstAttribute="top" secondItem="bVd-7Y-ysj" secondAttribute="bottom" constant="8" id="b40-Wt-HzE"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="RkX-KR-HaG" appends="YES" id="5Cb-fe-y9F"/>
@@ -201,6 +212,7 @@
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="7mS-Kv-3hZ" id="fDG-k4-fbT"/>
+                        <outlet property="imageView" destination="yN5-Ar-Ytz" id="taX-GN-H9H"/>
                         <outlet property="nameField" destination="x5w-v7-s2A" id="qhL-j0-4yi"/>
                         <outlet property="serialNumberField" destination="KdP-Sm-CaA" id="ska-yT-6EV"/>
                         <outlet property="valueField" destination="87r-pw-buw" id="m3k-Sz-oLc"/>
@@ -257,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cwE-r3-9oq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2498" y="-22"/>
+            <point key="canvasLocation" x="2441" y="-22"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ydz-BK-Qxk">

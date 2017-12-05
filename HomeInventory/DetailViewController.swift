@@ -20,15 +20,13 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var dateLabel: UILabel!
     
+    @IBOutlet var imageView: UIImageView!
+    
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         
         view.endEditing(true)
     }
-    
-    @IBAction func changeDate(_ sender: UIButton) {
-        print("button is working")
-    }
-    
+     
     var item: Item! {
         didSet {
             navigationItem.title = item.name
