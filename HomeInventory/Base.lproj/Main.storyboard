@@ -191,7 +191,11 @@
                                     <constraint firstAttribute="height" constant="44" id="Vfa-i5-r1i"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Item" id="z8z-ce-Qbg"/>
+                                    <barButtonItem systemItem="camera" id="z8z-ce-Qbg">
+                                        <connections>
+                                            <action selector="takePicture:" destination="8YN-6N-bf3" id="3w8-4s-iRP"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>

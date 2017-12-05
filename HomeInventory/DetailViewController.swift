@@ -22,6 +22,20 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var imageView: UIImageView!
     
+    @IBAction func takePicture(_ sender: UIBarButtonItem) {
+        let imagePicker = UIImagePickerController()
+        
+        // If the device has a camera, take a picture; otherwise, just pick from photo library
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePicker.sourceType = .camera
+        } else {
+            imagePicker.sourceType = .photoLibrary
+        }
+        
+    }
+    
+    
+    
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         
         view.endEditing(true)
