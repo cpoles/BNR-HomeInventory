@@ -123,6 +123,9 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         // get picked image from info dictionary
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         
+        // Store the image in the ImageStore for the item's key
+        imageStore.setImage(image, forKey: item.itemKey)
+        
         // Put the image on the screen in the image view
         imageView.image = image
         
