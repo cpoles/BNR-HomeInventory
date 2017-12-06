@@ -59,6 +59,7 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         }
         
         imagePicker.delegate = self
+        imagePicker.allowsEditing = true
         
         // place image picker on the screen
         present(imagePicker, animated: true, completion: nil)
@@ -129,7 +130,7 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         // get picked image from info dictionary
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        let image = info[UIImagePickerControllerEditedImage] as! UIImage
         
         // Store the image in the ImageStore for the item's key
         imageStore.setImage(image, forKey: item.itemKey)
