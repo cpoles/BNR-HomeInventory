@@ -127,6 +127,8 @@ class ItemsTableViewController: UITableViewController {
             
                 // Remove item from itemStore
                 self.itemStore.removeItem(item)
+                // Remove image from imageStore
+                self.imageStore.deleteImage(forKey: item.itemKey)
                 
                 // Delete the row from the data source
                 self.tableView.deleteRows(at: [indexPath], with: .fade)
