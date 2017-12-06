@@ -11,6 +11,7 @@
 		7720D2C51FD293F800BEE371 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7720D2C41FD293F800BEE371 /* DetailViewController.swift */; };
 		772120131FD3E29400814B93 /* DateChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772120121FD3E29400814B93 /* DateChangeViewController.swift */; };
 		7729B34F1FD1288B00143403 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7729B34E1FD1288B00143403 /* ItemCell.swift */; };
+		775100341FD7BFAD0015905B /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775100331FD7BFAD0015905B /* ImageStore.swift */; };
 		77BF90D91FCFA1230007DC52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF90D81FCFA1230007DC52 /* AppDelegate.swift */; };
 		77BF90DE1FCFA1230007DC52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77BF90DC1FCFA1230007DC52 /* Main.storyboard */; };
 		77BF90E01FCFA1230007DC52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77BF90DF1FCFA1230007DC52 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		7720D2C41FD293F800BEE371 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		772120121FD3E29400814B93 /* DateChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateChangeViewController.swift; sourceTree = "<group>"; };
 		7729B34E1FD1288B00143403 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		775100331FD7BFAD0015905B /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		77BF90D51FCFA1230007DC52 /* HomeInventory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeInventory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77BF90D81FCFA1230007DC52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77BF90DD1FCFA1230007DC52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -110,13 +112,14 @@
 			isa = PBXGroup;
 			children = (
 				77BF90D81FCFA1230007DC52 /* AppDelegate.swift */,
+				7720D2C41FD293F800BEE371 /* DetailViewController.swift */,
+				77134FF51FD3C3A9009142F2 /* DetailTextField.swift */,
+				772120121FD3E29400814B93 /* DateChangeViewController.swift */,
+				775100331FD7BFAD0015905B /* ImageStore.swift */,
 				77BF91061FCFA1760007DC52 /* ItemsTableViewController.swift */,
 				7729B34E1FD1288B00143403 /* ItemCell.swift */,
 				77BF91081FCFA51A0007DC52 /* Item.swift */,
 				77BF910A1FCFA7910007DC52 /* ItemsStore.swift */,
-				7720D2C41FD293F800BEE371 /* DetailViewController.swift */,
-				77134FF51FD3C3A9009142F2 /* DetailTextField.swift */,
-				772120121FD3E29400814B93 /* DateChangeViewController.swift */,
 				77BF90DC1FCFA1230007DC52 /* Main.storyboard */,
 				77BF90DF1FCFA1230007DC52 /* Assets.xcassets */,
 				77BF90E11FCFA1230007DC52 /* LaunchScreen.storyboard */,
@@ -286,6 +289,7 @@
 				77BF910B1FCFA7910007DC52 /* ItemsStore.swift in Sources */,
 				7720D2C51FD293F800BEE371 /* DetailViewController.swift in Sources */,
 				772120131FD3E29400814B93 /* DateChangeViewController.swift in Sources */,
+				775100341FD7BFAD0015905B /* ImageStore.swift in Sources */,
 				77BF91071FCFA1760007DC52 /* ItemsTableViewController.swift in Sources */,
 				77134FF61FD3C3A9009142F2 /* DetailTextField.swift in Sources */,
 				7729B34F1FD1288B00143403 /* ItemCell.swift in Sources */,

@@ -26,7 +26,6 @@ class ItemsTableViewController: UITableViewController {
     // MARK:- Action Methods
     
     @IBAction func addNewItem(_ sender: UIBarButtonItem) {
-        print("New Item pressed.")
         
         // create new item and add to store
         let newItem = itemStore.createItem()
@@ -57,10 +56,9 @@ class ItemsTableViewController: UITableViewController {
     }
 
 
-    // MARK:- Table view data source
+    // MARK:- TableView DataSource
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        
         return 1
     }
 
@@ -90,9 +88,7 @@ class ItemsTableViewController: UITableViewController {
             } else {
                 cell.valueLabel?.textColor = UIColor.red
             }
-            
         }
-        
         return cell
     }
     
