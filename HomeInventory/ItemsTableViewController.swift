@@ -13,6 +13,7 @@ class ItemsTableViewController: UITableViewController {
     // MARK:- Stored Properties
     
     var itemStore: ItemsStore!
+    var imageStore: ImageStore!
 
     // MARK: - Initialisation
     required init?(coder aDecoder: NSCoder) {
@@ -194,6 +195,7 @@ class ItemsTableViewController: UITableViewController {
                 // Destination view controller
                 let detailViewController = segue.destination as! DetailViewController
                 detailViewController.item = item
+                detailViewController.imageStore = imageStore
             }
         default:
             preconditionFailure("Unexpected segue identifier.")
