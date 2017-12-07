@@ -169,7 +169,6 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         // Take image picker off the screen
         // call the dismiss method
         dismiss(animated: true, completion: nil)
-        
     }
 
     
@@ -188,11 +187,7 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
             }
             
         default:
-            preconditionFailure("Unexpected segue identifer.")
+            preconditionFailure("Unexpected segue identifier.")
         }
-        
-        
     }
-    
-
 }
