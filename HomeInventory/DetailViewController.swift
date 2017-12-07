@@ -64,6 +64,34 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         // place image picker on the screen
         present(imagePicker, animated: true, completion: nil)
     }
+    
+    @IBAction func deletePicture(_ sender: UIBarButtonItem) {
+        
+        // Prompt user for deletion
+        let title = "Delete picture?"
+        let message = "Are you sure you want to delete this picture?"
+        
+        // create the AlertController
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+        
+        // create Cancel Action
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        ac.addAction(cancelAction)
+        
+        let deleteAction = UIAlertAction(title: "Delete",
+                                         style: .destructive,
+                                         handler: { (action) -> Void in
+                                            
+                                            // Remove item from itemStore
+                                            self.imageStore.deleteImage(forKey: self.item.itemKey)
+                                            self.imageView.image = nil
+                                            
+        })
+        ac.addAction(deleteAction)
+        
+        // Present the alert controller
+        present(ac, animated: true, completion: nil)
+    }
 
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         
