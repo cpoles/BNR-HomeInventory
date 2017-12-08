@@ -25,6 +25,7 @@ class ImageStore {
         if let data = UIImagePNGRepresentation(image) {
             // Write it to full URL
             let _ = try? data.write(to: url, options: [.atomic])
+            print("Saved images at: \(url.path)")
         }
     }
     
